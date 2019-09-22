@@ -1,0 +1,19 @@
+//Sizing
+$width: 640px;
+
+//Fonts
+$font-family: 'Kreon', serif;
+$standart-weight: 300;
+$bold-weight: 800;
+
+//Colors
+$link-color: #3F92D2;
+$text-color: #222222;
+$green-color: #00AF64;
+$light-gray: #949494;
+
+
+// Media Queries
+$iphone-query: "all and (max-width: 480px)"; // Only width, not device width
+$small-query: "all and (max-width: 660px)";
+$retina-query: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)";
