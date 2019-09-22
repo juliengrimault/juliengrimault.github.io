@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 48ff94e80b7a5e6f47c7f1b99985011958ca7fe0d5eab75c15539d73d835c15c
+-- hash: 9241b832ec70f6453f58a011bf923fb79f2f63d9469b9c5c22d3380b5d575f71
 
 name:           juelz
 version:        0.1.0.0
@@ -19,22 +19,10 @@ license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
   location: https://github.com/juliengrimault/juelz
-
-library
-  exposed-modules:
-      Lib
-  other-modules:
-      Paths_juelz
-  hs-source-dirs:
-      src
-  build-depends:
-      base >=4.7 && <5
-  default-language: Haskell2010
 
 executable juelz-exe
   main-is: Main.hs
@@ -45,7 +33,8 @@ executable juelz-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , juelz
+    , shake
+    , slick
   default-language: Haskell2010
 
 test-suite juelz-test
@@ -59,4 +48,6 @@ test-suite juelz-test
   build-depends:
       base >=4.7 && <5
     , juelz
+    , shake
+    , slick
   default-language: Haskell2010
