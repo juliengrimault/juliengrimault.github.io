@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9241b832ec70f6453f58a011bf923fb79f2f63d9469b9c5c22d3380b5d575f71
+-- hash: 22a600bb94287cb8aa9cf1782f8f8ecb3bd9e9ab03fcc76c2992e01ac5ca371e
 
 name:           juelz
 version:        0.1.0.0
@@ -32,9 +32,11 @@ executable juelz-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , shake
     , slick
+    , text
   default-language: Haskell2010
 
 test-suite juelz-test
@@ -46,8 +48,10 @@ test-suite juelz-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , juelz
     , shake
     , slick
+    , text
   default-language: Haskell2010

@@ -20,8 +20,10 @@ description:         Please see the README on GitHub at <https://github.com/juli
 
 dependencies:
 - base >= 4.7 && < 5
-- slick
+- aeson
 - shake
+- slick
+- text
 
 executables:
   juelz-exe:
