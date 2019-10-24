@@ -1,4 +1,3 @@
-
 section.home h2 {
   margin-top: 2em;
   @media #{$small-query} {
@@ -55,7 +54,7 @@ ul.apps {
   }
 
   img {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     border-radius: 20px;
     height: 100px;
     width: 100px;
@@ -129,7 +128,7 @@ div.px500 {
   }
 
   p a:first-child {
-   background: url('/assets/flickr.png') no-repeat 0 2px;
+   background: url('images/flickr.png') no-repeat 0 2px;
    background-size: cover;
    width: 16px;
    height: 16px;

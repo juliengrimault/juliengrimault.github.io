@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 22a600bb94287cb8aa9cf1782f8f8ecb3bd9e9ab03fcc76c2992e01ac5ca371e
+-- hash: 59b6fddf159588ff5a4fc06a0d9d73a7c242e413a68cbc56e75fb6531c058dff
 
 name:           juelz
 version:        0.1.0.0
@@ -34,6 +34,7 @@ executable juelz-exe
   build-depends:
       aeson
     , base >=4.7 && <5
+    , hsass
     , shake
     , slick
     , text
@@ -50,6 +51,7 @@ test-suite juelz-test
   build-depends:
       aeson
     , base >=4.7 && <5
+    , hsass
     , juelz
     , shake
     , slick

@@ -1,8 +1,6 @@
-@import "bourbon";
-@import "globals/*";
+@import "components/clearfix";
+@import "globals/variables";
 @import "components/reset";
-
-
 
 // HTML5
 section, header, footer, nav, article, aside, figure {
@@ -45,8 +43,8 @@ a {
   border-bottom: 1px solid transparent;
 
   &:hover {
-    @include transition-property(border);
-    @include transition-duration(0.2s);
+    transition-property: border;
+    transition-duration: 0.2s;
     border-bottom: 1px solid;
   }
 }
@@ -87,7 +85,7 @@ h2 {
 @import "components/badge";
 
 //Sections
-@import "sections/*";
+@import "sections/home";
 
 
 //Footer

@@ -11,6 +11,7 @@ import Development.Shake
 import Development.Shake.FilePath
 import GHC.Generics
 import Slick
+import Text.Sass
 
 -- | Data for the website 
 data SiteInfo = SiteInfo { 
@@ -49,6 +50,7 @@ generateSite :: SitePaths -> SiteInfo -> Action ()
 generateSite site siteInfo = do
     index <- generateIndex (source site) siteInfo
     writeIndex (output site) index
+    copyCSSFile site
     copyStaticFiles site
     
 -- Generates the index page from the template filed with the given `SiteInfo`
@@ -68,6 +70,27 @@ copyStaticFiles site =
     assetPaths <- getDirectoryFiles src ["images/*"]
     void $ forP assetPaths $ \path ->
          copyFileChanged (src </> path) ((output site) </> path)
+
+
+copyCSSFile :: SitePaths -> Action ()
+copyCSSFile site = 
+    let src = (source site) </> "stylesheets" </> "application.scss" in
+    do
+    css <- compileScssFile src def
+    writeFileChanged ((output site) </> "application.css") css
+
+
+-- | Helper to compile SCSS file
+compileScssFile :: FilePath -> SassOptions -> Action String
+compileScssFile file options =  do
+    need [file]
+    result <- liftIO $ compileFile file options
+    case result of
+        Right css -> do
+            return css
+        Left error -> 
+            fail $ show error
+
 
 -- | Main
 
