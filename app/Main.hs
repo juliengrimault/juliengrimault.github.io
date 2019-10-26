@@ -1,5 +1,3 @@
-{-# LANGUAGE DeriveAnyClass #-}
-{-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE DuplicateRecordFields #-}
 
 module Main where
@@ -10,39 +8,10 @@ import Data.Text
 import Development.Shake
 import Development.Shake.FilePath
 import GHC.Generics
+import Site
 import Slick
-import Text.Sass
-
--- | Data for the website 
-data SiteInfo = SiteInfo { 
-    author :: String,
-    title :: String,
-    twitter :: String,
-    github :: String,
-    flickr :: String,
-    apps :: [App],
-    contributions :: [Contribution]
-} deriving (Eq, Generic, Show, ToJSON)
-
--- | Gather useful paths required to build the website
-data SitePaths = SitePaths {
-    source :: FilePath,
-    output :: FilePath
-} deriving (Eq, Show)
-
--- | Data for an individual app
-data App = App {
-    title :: String,
-    thumbnail :: FilePath,
-    url :: String
-} deriving (Eq, Generic, Show, ToJSON)
-
- -- | Data for an individual open source contribution
-data Contribution = Contribution {
-    title :: String,
-    description :: String,
-    url :: String
-} deriving (Eq, Generic, Show, ToJSON)
+import Slick.Sass
+import Text.Sass.Options
 
 -- Methods to generate website
 
@@ -76,21 +45,8 @@ copyCSSFile :: SitePaths -> Action ()
 copyCSSFile site = 
     let src = (source site) </> "stylesheets" </> "application.scss" in
     do
-    css <- compileScssFile src def
+    css <- compileFile' src defaultSassOptions
     writeFileChanged ((output site) </> "application.css") css
-
-
--- | Helper to compile SCSS file
-compileScssFile :: FilePath -> SassOptions -> Action String
-compileScssFile file options =  do
-    need [file]
-    result <- liftIO $ compileFile file options
-    case result of
-        Right css -> do
-            return css
-        Left error -> 
-            fail $ show error
-
 
 -- | Main
 

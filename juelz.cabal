@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 59b6fddf159588ff5a4fc06a0d9d73a7c242e413a68cbc56e75fb6531c058dff
+-- hash: c8a31396b0905f310e674840cb5861d6c87cc0ff9e8c180dd48723a879acc8ef
 
 name:           juelz
 version:        0.1.0.0
@@ -24,6 +24,23 @@ source-repository head
   type: git
   location: https://github.com/juliengrimault/juelz
 
+library
+  exposed-modules:
+      Site
+      Slick.Sass
+  other-modules:
+      Paths_juelz
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , hsass
+    , shake
+    , slick
+    , text
+  default-language: Haskell2010
+
 executable juelz-exe
   main-is: Main.hs
   other-modules:
@@ -35,6 +52,7 @@ executable juelz-exe
       aeson
     , base >=4.7 && <5
     , hsass
+    , juelz
     , shake
     , slick
     , text

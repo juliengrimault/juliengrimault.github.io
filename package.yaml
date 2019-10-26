@@ -34,6 +34,8 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    dependencies:
+    - juelz
 
 tests:
   juelz-test:
@@ -45,3 +47,6 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - juelz
+
+library:
+  source-dirs: src
