@@ -51,7 +51,10 @@ copyCSSFile site =
 -- | Main
 
 main :: IO ()
-main = slick (generateSite paths julien)
+main =
+    let options = shakeOptions { shakeVerbosity = Chatty }
+    in
+    slickWithOpts options (generateSite paths julien)
 
 -- | Defines site specific data
 
