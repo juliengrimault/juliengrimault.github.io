@@ -58,7 +58,7 @@ main = slick (generateSite paths julien)
 paths :: SitePaths
 paths = SitePaths {
     source = "./site",
-    output = "./docs"
+    output = "./dist"
 }
 
 julien :: SiteInfo
