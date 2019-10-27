@@ -36,7 +36,7 @@ copyStaticFiles :: SitePaths -> Action ()
 copyStaticFiles site = 
     let src = (source site) in
     do
-    assetPaths <- getDirectoryFiles src ["images/*"]
+    assetPaths <- getDirectoryFiles src ["images/*", "CNAME"]
     void $ forP assetPaths $ \path ->
          copyFileChanged (src </> path) ((output site) </> path)
 
