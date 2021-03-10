@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/juliengrimault
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://juliengrimault.me
+  * I am juliengrimault (https://keybase.io/juliengrimault) on keybase.
+  * I have a public key ASAJr3Bwr0jvjisKY-bpuuNHSBB38m7sVWxa7HYn85_5pgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012009af7070af48ef8e2b0a63e6e9bae347481077f26eec556c5aec7627f39ff9a60a",
+      "host": "keybase.io",
+      "kid": "012009af7070af48ef8e2b0a63e6e9bae347481077f26eec556c5aec7627f39ff9a60a",
+      "uid": "ed1cee81dee5fe1ab0b5a4ed2e4dee00",
+      "username": "juliengrimault"
+    },
+    "merkle_root": {
+      "ctime": 1615389767,
+      "hash": "27faa8ea3eed4bc91b1e3cad8ab88fe3e30e2b583ea6967f7aef77add4c868a5f291cfe54e3f55cc889c1501fc8df59a5d2e6136f87b1fb5040e8a13c6c7785b",
+      "hash_meta": "89a99af9a2bd12b9be1462422127c191c951d4ec5bbcfba5457f06ae71486939",
+      "seqno": 19339091
+    },
+    "service": {
+      "entropy": "Z6hnziRDKv+StYqvSeXe/QLl",
+      "hostname": "juliengrimault.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.2"
+  },
+  "ctime": 1615389818,
+  "expire_in": 504576000,
+  "prev": "81510925fd9428fc349fa2e3415e1493130913ae69a66845734f612ceca92782",
+  "seqno": 25,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgCa9wcK9I744rCmPm6brjR0gQd/Ju7FVsWux2J/Of+aYKp3BheWxvYWTESpcCGcQggVEJJf2UKPw0n6LjQV4UkxMJE65ppmhFc09hLOypJ4LEIKpsYEpc61cYBMQJDtfZ8pGdvMjtlrHEM1/4uz1Lb43UAgHCo3NpZ8RAWhSbw0Mv85Z4Rd/fPSRy6o5ypSJmcOsskgcwQz66fdK5Xn4BgxFsQXrgYNdg9uLTJItTKSAxrgefK2vhZjJrAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGk+3zLu9sN70OaxKkFtuVJ8ShtVUf28Hsf0yJogHzJLo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/juliengrimault
+
+==================================================================
